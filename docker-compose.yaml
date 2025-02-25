@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: election-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://user:password@db:5432/election_db
+    networks:
+      - election-network
+
+#database setup
+  db: 
+    image: postgres:13
+    container_name: election-db
+    environment:
+      - NODE_ENV=production
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=user
+      - DB_PASSWORD=password
+      - DB_NAME=election_db
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    networks:
+      - election-network
+
+networks:
+  election-network:
+    driver: bridge #supposedly, this is default, im gonna be careful though
+
+volumes:
+  pg_data:

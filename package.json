@@ -1,0 +1,22 @@
+{
+  "name": "iste432-election-application",
+  "version": "1.0.0",
+  "description": "Election application for ISTE 432",
+  "main": "homepage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "express": "^4.21.1",
+    "jquery": "^3.7.1",
+    "pg": "^8.13.0",
+    "uuid": "^11.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
