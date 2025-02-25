@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    <title>System Statistics</title>
+</head>
+<body>
+  <div class="container">
+      <h1>System Statistics</h1>
+      <div id="stats">
+          <p><strong>Logged-In Users:</strong> <span id="loggedInUsers">Loading...</span></p>
+          <p><strong>Active Elections:</strong> <span id="activeElections">Loading...</span></p>
+          <p><strong>Average Query Response Time:</strong> <span id="avgQueryTime">Loading...</span> ms</p>
+          <p><strong>Average HTTP Response Time:</strong> <span id="avgHttpTime">Loading...</span> ms</p>
+      </div>
+      <button onclick="loadStats()">Refresh Stats</button>
+  </div>
+
+  <script src="systemstats.js"></script>
+</body>
+</html>
